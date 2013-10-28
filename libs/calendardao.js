@@ -2,10 +2,32 @@ var pg      = require('pg');
 
 function GetConnection()
 {
-    var constr = process.env.DATABASE_URL || "postgres://pguser:cjchnws@192.168.57.186:5432/xgcalendar";
-    //var constr = "";
-    console.log(constr);
-    var db = new pg.Client(constr);
+    var config ;
+    if(process.env.DATABASE_URL)
+    {
+        config = {
+                    host:"ec2-54-247-175-38.eu-west-1.compute.amazonaws.com",
+                    database:"d7ot1oli315mal",
+                    user:"fwhkvbfknfgrqq",
+                    port:5432,
+                    password:"FSA5y28Xaiw7Qv_kl40qZsCO1p",
+                    ssl:true
+        };
+    }
+    else
+    {
+        config ={
+                    host:"192.168.57.186",
+                    database:"xgcalendar",
+                    user:"pguser",
+                    port:5432,
+                    password:"cjchnws"                    
+                };
+    }
+   
+   
+    console.log(config);
+    var db = new pg.Client(config);
     return db;
 }
 
