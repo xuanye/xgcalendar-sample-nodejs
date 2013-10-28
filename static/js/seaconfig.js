@@ -7,8 +7,7 @@ seajs.config({
       'dropdown': 'plugin/jquery.dropdown.js',
       'dailog': 'plugin/jquery.ifrmdailog.js'          
   },
-  preload: [
-   'jquery',
+  preload: [  
    'common' 
   ],
   debug: true,

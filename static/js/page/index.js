@@ -1,6 +1,6 @@
 define(function(require, exports, module) { //参数名字不能改
   var minicalendar = require("../plugin/minicalendar");
-  require("plugin/xgcalendar");
+  //require("plugin/xgcalendar");
   require("dailog");
   exports.init =function() {   
      var minical =new minicalendar({

@@ -4,7 +4,7 @@ function GetConnection()
 {
     var constr = process.env.DATABASE_URL || "postgres://pguser:cjchnws@192.168.57.186:5432/xgcalendar";
     //var constr = "";
-    //console.log(constr);
+    console.log(constr);
     var db = new pg.Client(constr);
     return db;
 }
@@ -67,7 +67,7 @@ exports.addCalendar = function(calendar,cb,errcb){
     ",\"IsAllDayEvent\",\"HasAttachment\",\"Category\",\"InstanceType\",\"Attendees\",\"AttendeeNames\""+
     ",\"OtherAttendee\",\"UPAccount\",\"UPName\",\"UPTime\",\"RecurringRule\",\"Id\") "+
     "VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19) "
-    console.log(calendar);
+    //console.log(calendar);
     db.query(sql,[calendar.Subject,calendar.Location,calendar.MasterId,calendar.Description,
         calendar.CalendarType,calendar.StartTime,calendar.EndTime,calendar.IsAllDayEvent?1:0,
         calendar.HasAttachment?1:0,calendar.Category,calendar.InstanceType,calendar.Attendees,
@@ -107,8 +107,8 @@ exports.UpdateCalendar = function(id,userid,calendar,cb,errcb){
         }
     }
     var sql = sqlupdate_h + arrsql.join(",") +sqlupdate_f;
-    console.log(sql);
-    console.log(arrparams);
+   // console.log(sql);
+   // console.log(arrparams);
     db.query(sql,arrparams,function(err,result){
         db.end();
         if(err)
