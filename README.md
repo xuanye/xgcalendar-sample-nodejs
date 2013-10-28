@@ -10,4 +10,4 @@ xgcalendar的nodejs版本的demo2
 
 该项目使用 Travis CI 作为持续集成的工具 [![构建状态](https://travis-ci.org/xuanye/xgcalendar-sample-nodejs.png?branch=master)](https://travis-ci.org/xuanye/xgcalendar-sample-nodejs)
 
-在线演示 可以通过这个地址访问[http://xgcalendar.tk/](http://xgcalendar.tk/) 
+可以通过这个地址访问[在线演示](http://xgcalendar.tk/) 
