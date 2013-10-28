@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+- '0.10'
+
+deploy:
+  provider: heroku
+  app: xgcalendar # optional if it's the same as your repo name
+  api_key: "dd0731c8-cc14-4bda-8b04-25f376e91104"
+
