@@ -87,7 +87,7 @@ exports.editview  = function(req,res){
   var id = req.params.id;
   var eventdata={};
 
-  if(id != "" && id !="0" )
+  if(!id)
   {
      //修改
       calendardao.GetCalendar(id,req.ip,function(dbdata){
