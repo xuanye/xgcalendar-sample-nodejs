@@ -3,17 +3,17 @@ var pg      = require('pg');
 function GetConnection()
 {
     var config ;
-    if(process.env.DATABASE_URL)
-    {
-        config = {
-                    host:"ec2-54-247-175-38.eu-west-1.compute.amazonaws.com",
-                    database:"d7ot1oli315mal",
-                    user:"fwhkvbfknfgrqq",
-                    port:5432,
-                    password:"FSA5y28Xaiw7Qv_kl40qZsCO1p",
-                    ssl:true
-        };
-    }
+   
+    config = {
+                host:"ec2-54-247-175-38.eu-west-1.compute.amazonaws.com",
+                database:"d7ot1oli315mal",
+                user:"fwhkvbfknfgrqq",
+                port:5432,
+                password:"FSA5y28Xaiw7Qv_kl40qZsCO1p",
+                ssl:true
+    };
+   
+    /*
     else
     {
         config ={
@@ -24,7 +24,7 @@ function GetConnection()
                     password:"cjchnws"                    
                 };
     }
-   
+   */
    
     console.log(config);
     var db = new pg.Client(config);
