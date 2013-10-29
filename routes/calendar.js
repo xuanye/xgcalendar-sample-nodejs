@@ -20,6 +20,10 @@ exports.index = function(req,res){
     res.render('index',{title:__('title')});   
 }
 
+exports.database = function(req,res){
+  res.send(process.env.DATABASE_URL);
+};
+
 exports.query = function(req,res) {
     var ret        = {} ;
     var viewtype   = req.body.viewtype; // week,month,day

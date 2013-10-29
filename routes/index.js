@@ -8,3 +8,4 @@ exports.index = function(req, res){
   res.redirect("/calendar");
   //res.render('index', { title: 'Cloud Foundry',data:'new world coming!' });
 };
+

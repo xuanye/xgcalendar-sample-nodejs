@@ -41,6 +41,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/database',calendar.database);
+
 //app.get('/install', install.index);
 /**/
 app.get('/calendar', calendar.index);
