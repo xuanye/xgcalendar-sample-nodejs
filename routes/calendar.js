@@ -87,7 +87,7 @@ exports.editview  = function(req,res){
   var id = req.params.id;
   var eventdata={};
 
-  if(!id)
+  if(!!id)
   {
      //修改
       calendardao.GetCalendar(id,req.ip,function(dbdata){
@@ -250,7 +250,7 @@ exports.save = function(req,res){
   //data.Location      = '宝芝林';
   data.MasterId      = clientzone ;
   
-  if(id !="" && id !="0")
+  if(!!id)
   {
     calendardao.UpdateCalendar(id,req.ip,data,function(rcount){
           ret.IsSuccess = true;
@@ -393,7 +393,7 @@ exports.delete =function(req,res){
     var ret         = {};
     var data        = {};
     var id          = req.body.calendarId ;
-    if(id=="" && id =="0")
+    if(!!id)
     {
       ret.IsSuccess = false;
       ret.Msg       = __("parameterinvalid","Id");

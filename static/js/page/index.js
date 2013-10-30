@@ -10,7 +10,7 @@ define(function(require, exports, module) { //参数名字不能改
      var op = {
         view: "week",
         theme:1,
-        autoload:true, //
+        autoload:false, //
         showday: new Date(),
         EditCmdhandler:edit,
         //DeleteCmdhandler:dcal,
@@ -19,7 +19,7 @@ define(function(require, exports, module) { //参数名字不能改
         onBeforeRequestData: cal_beforerequest,
         onAfterRequestData: cal_afterrequest,
         onRequestDataError: cal_onerror, 
-        url: "/calendar/query" ,  
+        url: "",//"/calendar/query" ,  
         quickAddUrl: "/calendar/add" ,  
         quickUpdateUrl: "/calendar/update" ,  
         quickDeleteUrl:  "/calendar/delete" //快速删除日程的

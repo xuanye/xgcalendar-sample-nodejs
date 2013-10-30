@@ -12,8 +12,8 @@ seajs.config({
   ],
   debug: true,
   map: [
-    [/^(.*\/static\/js\/page\/.*\.(?:js))(?:.*)$/i, '$1?2013010801'],
-    [/^(.*\/static\/js\/plugin\/.*\.(?:js))(?:.*)$/i, '$1?2013010801']
+    [/^(.*\/static\/js\/page\/.*\.(?:js))(?:.*)$/i, '$1?2013102901'],
+    [/^(.*\/static\/js\/plugin\/.*\.(?:js))(?:.*)$/i, '$1?2013102901']
   ],
   //base: 'http://example.com/path/to/libs/',
   charset: 'utf-8',
